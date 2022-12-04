@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container{
+        width: 300px;
+        height: 175px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        margin: auto;
+    }
+
+    #number, #v_code{
+        width: cal(100% -24px);
+        padding: 10px;
+        font-size: 20px;
+        margin-bottom: 5px;
+        outline: none;
+    }
+
+    #p-conf, #n-conf{
+        width: cal(100% -22px);
+        border: 2px solid green;
+        border-radius: 4px;
+        padding: 8px 10px;
+        margin: 4px 0px;
+        background-color: rgba(0, 249, 10, 0.5);
+        display: none;
+    }
+
+    #n-conf{
+        border-color: red;
+        background-color: rgba(225, 0, 4,0.5);
+    }
+
+    #verifier{
+        display: none;
+    }
+
+    .error{
+            margin-top: -5px;
+            padding-left: 10%;
+            /* font-size: 70%; */
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <section class="container">
+        <div id="sender">
+            <input type="text" id="number" placeholder="enter phone number">
+            <p class="error" id="epno" ></p>
+            <div id="in_c"></div>
+            <input type="button" id="send" value="send" onclick="phoneauth()">
+            
+        </div>
+        <div id="verifier">
+            <input type="text" id="v_code" placeholder="enter OTP">
+            <input type="button" id="verify" value="verify" onclick="codeverify()">
+            <div id="p-conf">Number Verifocation</div>
+            <div id="n-conf">OTP error</div>
+        </div>
+    </section>
+
+    <script src="https:www.gstatic.com/firebasejs/6.0.2/firebase.js"></script>
+    <script> 
+        const firebaseConfig = {
+            apiKey: "AIzaSyCVEip0r6ntONpOE1Eb2YQ9LhSwI8QGXEo",
+            authDomain: "otpdemo-9e910.firebaseapp.com",
+            projectId: "otpdemo-9e910",
+            storageBucket: "otpdemo-9e910.appspot.com",
+            messagingSenderId: "646400000217",
+            appId: "1:646400000217:web:760db38f63eee6e5debec8",
+            measurementId: "G-YPS5FNBE6B"
+        };
+
+            firebase.initializeApp(firebaseConfig );
+            function render(){
+                window.recaptchaVerificater = new firebase.auth.recaptchaVerificater('in_c');
+                recaptchaVerificater.render();
+            }
+
+            function phoneauth(){
+                var number = document.getElementById('number').value;
+                var epno=document.getElementById("epno");
+                    if(number.trim()==''){
+                        epno.innerHTML = "enter your phone number";
+                        pno.focus();
+                        return false;
+                    }
+                    else if(number.length !==10){
+                    epno.innerHTML = "enter valid phone number";
+                    pno.focus();
+                    return false;}
+
+                    else if(number.length ==10){
+                        epno.innerHTML = "";
+                        return true;
+                    }
+                firebase.auth().signInWithPhoneNo (number ,
+                window.recaptchaVerificater ).then(function(confirmationResult){
+                    window.confirmationResult= confirmationResult;
+                    coder_result =confirmationResult;
+                    document.getElementById('sender').style.display = 'none';
+                    document.getElementById('verifier').style.display = 'block';
+                }).catch(function(error){
+                    alert(error.message);
+                });
+
+            function codeverify(){
+                var code = document.getElementById('v_code').value;
+                coderesult.confirm(code).then(function(){
+                    document.querySelector('#p-conf').style.display = 'block';
+                    document.querySelector('#n-conf').style.display = 'none';
+                }).catch(function(){
+                    document.querySelector('#p-conf').style.display = 'none';
+                    document.querySelector('#n-conf').style.display = 'block';
+
+                })
+            }              
+            }
+    </script>
+</body>
+</html>

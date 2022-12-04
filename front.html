@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #f6f5f7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+	margin: -20px 0 50px;
+}
+
+h1 {
+	font-weight: bold;
+	margin: 0;
+}
+
+h2 {
+	text-align: center;
+}
+
+p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+
+span {
+	font-size: 12px;
+}
+
+a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+button {
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}
+
+button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+form {
+	background-color: #FFFFFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+
+input {
+	background-color: #eee;
+	border: none;
+	padding: 12px 25%;
+	margin: 8px 0;
+	width: 100%;
+}
+
+.container {
+	background-color: #fff;
+	border-radius: 10px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+}
+
+.form-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+.container.right-panel-active .sign-in-container {
+	transform: translateX(100%);
+}
+
+.sign-up-container {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+
+.container.right-panel-active .sign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+
+@keyframes show {
+	0%, 49.99% {
+		opacity: 0;
+		z-index: 1;
+	}
+	
+	50%, 100% {
+		opacity: 1;
+		z-index: 5;
+	}
+}
+
+.overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+.container.right-panel-active .overlay-container{
+	transform: translateX(-100%);
+}
+
+.overlay {
+	background: #FF416C;
+	background: -webkit-linear-gradient(to right, #FF4B2B, #FF416C);
+	background: linear-gradient(to right, #FF4B2B, #FF416C);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+  	transform: translateX(50%);
+}
+
+.overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.overlay-left {
+	transform: translateX(-20%);
+}
+
+.container.right-panel-active .overlay-left {
+	transform: translateX(0);
+}
+
+.overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+.container.right-panel-active .overlay-right {
+	transform: translateX(20%);
+}
+
+.social-container {
+	margin: 20px 0;
+}
+
+.social-container a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+}
+
+footer {
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer i {
+    color: red;
+}
+
+footer a {
+    color: #3c97bf;
+    text-decoration: none;
+}
+img{
+    position: relative;
+    z-index: 2;
+    width: 23px;
+    margin-left: -75%;
+    margin-bottom: -39px;
+	margin-top: 18px;
+}
+.error{
+	margin: 0%;
+	font-size: 70%;
+	color: red;
+}
+    </style>
+</head>
+<body>
+    <h2>Sign in/up Form</h2>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your email for registration</span>
+			<img src="https://www.iconpacks.net/icons/2/free-user-icon-3296-thumb.png" alt="">
+			<input type="text" placeholder="Name" id="ca_name" />
+			<p class="error" id="name_error-su" ></p>
+			
+			<img src="https://cdn0.iconfinder.com/data/icons/cosmo-work/40/mail-512.png" alt="">
+			<input type="email" placeholder="Email" id="ca_email" />
+			<p class="error" id="email_error-su"></p>
+			
+			<img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_password-512.png" alt="">
+			<input type="password" placeholder="Password" id="ca_password" />
+			<p class="error" id="password_error-su"></p>
+			
+			<button id="sign_up">
+				<!-- <a href="form.html"> -->
+					Sign Up</a></button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your account</span>
+			<img src="https://cdn0.iconfinder.com/data/icons/cosmo-work/40/mail-512.png" alt="">
+			<input type="email" id="si_email" placeholder="email" />
+			<p class="error" id="email_error-si"></p>
+
+			<img src="https://cdn4.iconfinder.com/data/icons/glyphs/24/icons_password-512.png" alt="">
+			<input type="password" id="si_password" placeholder="Password" />
+			<p class="error" id="password_error-si"></p>
+			<a href="#">Forgot your password?</a>
+			<button id="sign_in">
+				<!-- <a href="form.html"> -->
+					Sign In
+				<!-- </a> -->
+			</button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back!</h1>
+				<p>To keep connected with us please login with your personal info</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Friend!</h1>
+				<p>Enter your personal details and start journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- <script src="front.js"></script> -->
+
+<script>
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+    container.classList.add("right-panel-active");
+});
+
+signInButton.addEventListener('click', () => {
+    container.classList.remove("right-panel-active");
+});
+
+
+document.getElementById('sign_up').onclick = function () {
+    var a=document.querySelector('#ca_name');
+    var b=document.querySelector('#ca_email');
+    var c=document.querySelector('#ca_password');
+    var lowerCaseLetters = /[a-z]/g;
+    var upperCaseLetters = /[A-Z]/g;
+    var numbers = /[0-9]/g;
+
+    // name
+    if (a.value.trim()=='') {
+        document.getElementById("name_error-su").innerHTML = "enter your name";
+        a.focus();
+        return false;
+    }
+    else if (a.value.includes('@' || '#' || '$' || '%' || '^' || '&' || '*'|| '`' || '~' || '!' || '?' || '<' || '>' || '/' || '[' || ']' || '-' || '+' )) {
+        document.getElementById("name_error-su").innerHTML = "you cannot use @,!,#,$...symbols in name";
+        a.value='';
+        a.focus();
+        return false;
+    } 
+    else if(a.value.match(numbers)) {
+        document.getElementById("name_error-su").innerHTML = "you cannot use numbers in name";
+        a.value='';
+        a.focus();
+        return false;
+    }
+    else{
+        document.getElementById("name_error-su").innerHTML = "";
+        true;
+    }
+
+    //email sign up
+    if (b.value.trim()=='' ) {
+        document.getElementById("email_error-su").innerHTML = "email cannot be blank";
+        b.focus();
+        return false;
+    }
+    else if(b.value.trim().length<7){
+        document.getElementById("email_error-su").innerHTML = "enter Valid email address!";
+        b.focus();
+        return false;
+    }
+    if(b.value.includes('.com')){
+        document.getElementById("email_error-su").innerHTML = "";
+        true;
+    }
+    else{
+        document.getElementById("email_error-su").innerHTML = "enter Valid email address!";
+        b.focus();
+        return false;
+    }
+
+
+    //password sign up
+    if (c.value.trim()=='') {
+        document.getElementById("password_error-su").innerHTML = "password cannot be blank";
+        c.focus();
+        return false;
+    }
+
+    if(c.value.includes('@' || '#' || '$' || '%' || '^' || '&' || '*'|| '`' || '~' || '!' || '?' || '<' || '>' || '/' || '[' || ']' || '-' || '+'  )){
+        document.getElementById("password_error-su").innerHTML = "";
+        true; 
+    }
+    else{
+        document.getElementById("password_error-su").innerHTML = "Your password needs a special case letter";
+        c.focus();
+        return false;
+    }
+    if (c.value.match(numbers)) {    
+        document.getElementById("password_error-su").innerHTML = "";
+        true;
+    } 
+    else {
+        document.getElementById("password_error-su").innerHTML = "Your password needs a number";
+        c.focus();
+        return false;
+    }
+
+    if (c.value.match(lowerCaseLetters)) {
+        document.getElementById("password_error-su").innerHTML = "";
+        true;
+    } else {
+        document.getElementById("password_error-su").innerHTML = "Your password needs a lower case letter";
+        c.focus(); 
+        return false;
+    }
+    if (c.value.match(upperCaseLetters)) {
+        document.getElementById("password_error-su").innerHTML = "";
+        true;
+    } else {
+        document.getElementById("password_error-su").innerHTML = "Your password needs a upper case letter";
+        c.focus(); 
+        return false;
+    }
+
+    }
+
+    document.getElementById('sign_in').onclick = function () {
+    var lowerCaseLetters = /[a-z]/g;
+    var upperCaseLetters = /[A-Z]/g;
+    var numbers = /[0-9]/g;
+    var d=document.querySelector('#si_email');
+    var e=document.querySelector('#si_password');
+
+    //email sign in
+    if (d.value.trim()=='') {
+        document.getElementById("email_error-si").innerHTML = "email cannot be blank";
+        d.focus();
+        return false;
+    }
+    else if(d.value.trim().length<7){
+        document.getElementById("email_error-si").innerHTML = "enter Valid email address!";
+        d.focus();
+        return false;
+    }
+    else{
+        document.getElementById("email_error-si").innerHTML = "";
+    }
+    
+    if(d.value.includes('.com')){
+        document.getElementById("email_error-si").innerHTML = "";
+    // true;
+    }
+    else{
+        document.getElementById("email_error-si").innerHTML = "enter Valid email address!";
+        d.focus();
+        return false;
+    }
+
+
+
+
+    //password sign in
+    if (e.value.trim()=='') {
+        document.getElementById("password_error-si").innerHTML = "password cannot be blank";
+        e.focus();
+        return false;
+    }
+
+    if(e.value.includes('@' || '#' || '$' || '%' || '^' || '&' || '*'|| '`' || '~' || '!' || '?' || '<' || '>' || '/' || '[' || ']' || '-' || '+'  )){
+        document.getElementById("password_error-si").innerHTML = "";
+        true; 
+    }
+    else{
+        document.getElementById("password_error-si").innerHTML = "Your password needs a special case letter";
+        e.focus();
+        return false;
+    }
+    if (e.value.match(numbers)) {    
+        document.getElementById("password_error-si").innerHTML = "";
+        true;
+    } 
+    else {
+        document.getElementById("password_error-si").innerHTML = "Your password needs a number";
+        e.focus();
+        return false;
+    }
+
+    if (e.value.match(lowerCaseLetters)) {
+        document.getElementById("password_error-si").innerHTML = "";
+        true;
+    } else {
+        document.getElementById("password_error-si").innerHTML = "Your password needs a lower case letter";
+        e.focus(); 
+        return false;
+    }
+    if (e.value.match(upperCaseLetters)) {
+        document.getElementById("password_error-si").innerHTML = "";
+        true;
+    } else {
+        alert("Your password needs a upper case letter")
+        document.getElementById("password_error-si").innerHTML = "Your password needs a upper case letter";
+        e.focus(); 
+        return false;
+    }
+
+
+}
+</script>
+</body>
+</html>

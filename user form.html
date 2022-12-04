@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sample</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+        
+        body{
+            font-family: Montserrat, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+	        background: linear-gradient(to right, #FF4B2B, #FF416C);
+            /* background-color: #0b4eb3 */
+        }
+        label{
+            margin-bottom: 0.5rem;
+            font-size: 120%;
+            font-weight: 500;
+        }
+        input{
+            width: 100%;
+            border: 1px solid #ccc;
+            height: 25px;
+            background-color: beige;
+        }
+
+        input[type='radio']{
+            transform: scale(1.2);
+            width: 5%;
+            height: 15px;
+            margin-top: -2%;
+            margin-bottom: 0%;
+        }
+        input[type='radio']:focus{
+            box-shadow: 0 0px 0px 0px ;
+        }
+        input {
+            border: transparent;
+            width: 80%;
+            margin-top: 2%;
+            border-bottom: solid rgb(224, 220, 220);
+            opacity: 80%;
+            padding-left: 2%;
+            margin-bottom: 5%;
+        }
+
+        input:focus,option:focus{
+            outline: none;
+            border: 1.5px ;
+            box-shadow: 0 2px 0px 0px red;
+            opacity: 100%;
+        }
+        .star{
+            color: rgba(255, 0, 0, 0.6);
+        }
+        .error{
+            margin-top: -5%;
+            padding-left: 5%;
+            /* font-size: 70%; */
+            color: red;
+        }
+
+        .opt{
+            margin-left: 30px;
+            margin-top: -23px;
+        }
+
+        #be_blood-group,#be_gender{
+            width: 80%;
+            border-radius: 10px;
+            padding: 1%;
+            margin-bottom: 5%;
+            margin-top: 3%;
+        }
+
+        a{
+            text-decoration: none;
+            color: #f3f3f3;
+            font-size: 150%;
+        }
+
+        button{
+            background-color: #ff482B;
+            margin-bottom: 5%;
+        }
+
+        #main{
+            display: grid;
+            grid-template-columns: repeat(5,300px);
+            width: 280px;
+            gap: 150px;
+            overflow-x: hidden;
+            background-color: beige;
+            box-shadow: 0px 1px 20px 5px #111111;
+            padding: 20% 10%;
+            border-radius: 20px;
+            margin-left: -13%;
+            /* height: 450px; */
+            /* margin: 5% 25%; */
+            /* align-self: center; */
+        }
+
+        #part-1{
+            /* padding: 10%; */
+            grid-column-start: 1;
+        }
+
+        #part-2{
+            grid-column-start: 2;
+        }
+        #submit{
+            grid-row-start: 2;
+            width: 100px;
+            transform: scale(1.5);
+            position: fixed;
+            margin: 500px 150px;
+        }
+        
+        .btns-group{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5%;
+        }
+        .btn{
+            padding: 4%;
+            width: 70%;
+            display: block;
+            text-decoration: none;
+            color: #f3f3f3;
+            text-align: center;
+            border-radius: 7px;
+
+            /* cursor: pointer;
+            transition: 0.3s */
+        }
+        .btn:hover{
+            box-shadow: 0 0 0 2px #fff;
+            background-color: #3b730f;
+            box-shadow: 0px 0px 10px 3px rgb(105, 171, 7);
+        }
+
+        #submit-form{
+            height: 90%;
+            background-color: #ff482B;
+            opacity:90%;
+            border: 2px solid black;
+        }
+
+        #submit-form:hover{
+            background-color: #3b730f;
+            opacity:100%;
+            box-shadow: 0px 0px 10px 3px rgb(105, 171, 7);
+        }
+
+       
+    </style>
+</head>
+<body>
+    <form action="#" class="form" id="forms" onsubmit="event.preventDefault()">
+      
+    
+        <div class="progressbar">
+          <div class="progress" id="progress"></div>
+          
+          <div
+            class="progress-step progress-step-active"
+            data-title="Start"
+          ></div>
+          
+          <div class="progress-step" data-title="Personal"></div>
+          <div class="progress-step" data-title="Address"></div>
+        </div>
+<section id="main">
+        <section class="step-forms step-forms-active">          
+          <div class="">
+            <section id="part-1">
+                <div>
+                    <label class="box" for="">Phone Number <b class="star">*</b> <br>
+                        <input type="text" name="" id="be_phoneno" placeholder="Your answer" ></label>
+                    <p class="error" id="epno" ></p>
+                </div>  
+              <div>
+                  <label class="box" for="">Are you suffering from any disease<b class="star">*</b> </label><br><br>
+                      <input type="radio" name="q" value="yes"> <p class="opt">Yes</p>
+                      <input type="radio" name="q" value="no" id="no"><p class="opt">No</p>
+                  <p class="error" id="y/n_error" ></p>
+              </div>
+              <div><br>
+                  <label class="box" for="">Mention Disease (if any)<br><input type="text" name="" id="" placeholder="Your answer" ></label>
+              </div><br>
+              <div class="btns-group">
+              <button class="btn btn-next" id="no" >
+                <a href="#part-2" id="next-1" >
+                     Next </a></button>
+                </div>
+          </section>
+          </div>
+        </section> 
+
+        
+        <section class="step-forms">
+          <div class="">
+            <section id="part-2">
+              <div>
+                  <label class="box" for="">Name <b class="star">*</b> <br><input type="text" name="" id="be_name" placeholder="Your answer" ></label>
+                  <p class="error" id="name_error" ></p>
+              </div>            
+              <div>
+                  <label class="box" for="">Blood Group <b class="star">*</b> <br></label>
+                    <select name="" id="be_blood-group">
+                        <option value="" id="none">select your blood type</option>
+                        <option name="bg" value="A+" >A+</option>
+                        <option name="bg" value="A-">A-</option>
+                        <option name="bg" value="B+">B+</option>
+                        <option name="bg" value="B-">B-</option>
+                        <option name="bg" value="AB+">AB+</option>
+                        <option name="bg" value="AB-">AB-</option>
+                        <option name="bg" value="O+">O+</option>
+                        <option name="bg" value="O-">O-</option>
+                    </select>
+                    
+                  <p class="error" id="btype_error" ></p>
+              </div>
+              <div><br>
+                <label class="box" for="">Gender <b class="star">*</b> <br></label>
+                    <select name="" id="be_gender">
+                        <option value="" id="none">select your Gender</option>
+                        <option name="bg" value="Male" >Male</option>
+                        <option name="bg" value="Female">Female</option>
+                        <option name="bg" value="Others">Others</option>
+                    </select>
+                <p class="error" id="gender_error" ></p>
+            </div><br>
+              <div>
+                  <label class="box" for="">Age <b class="star">*</b> <br><input type="number" min="18" max="50" name="" id="be_age" placeholder="Your answer" ></label>
+                  <p class="error" id="age_error" ></p>
+              </div>
+              
+              <div class="btns-group">
+                <button class="btn btn-prev" id="prev-2">
+                    <a href="#part-1" >
+                    Previous</a></button>
+                <button class="btn btn-next" id="next2">
+                    <a href="#part-3">
+                        Next
+                    </a>
+                </button>
+              </div>
+            </section>
+          
+          </div>
+        </section> 
+
+        
+        <section class="step-forms">
+          <div class="">
+            <section id="part-3">
+              <div>
+                  <label class="box" for="">State <b class="star">*</b> <br><input type="text" name="" id="be_state" placeholder="Your answer" ></label>
+                  <!-- <select name="" id="">
+                    <option value=""></option>
+                  </select> -->
+                  <p class="error" id="state_error" ></p>
+              </div><br>
+              <div>
+                  <label class="box" for="">City <b class="star">*</b>  <br><input type="text" name="" id="be_city" placeholder="Your answer" ></label>
+                  <!-- <select name="" id="">
+                    <option value=""></option>
+                  </select> -->
+                  <p class="error" id="city_error" ></p>
+              </div><br>
+              <div>
+                  <label class="box" for="">Zip Code <b class="star">*</b> <br><input type="number" name="" id="be_zip-code" placeholder="Your answer" ></label>
+                  <p class="error" id="zip_error" ></p>
+              </div>   
+              <div>
+                  <label class="box" for="">Street Address <b class="star">*</b> <br><input type="text" name="" id="be_address" placeholder="Your answer" ></label>
+                  <p class="error" id="address_error" ></p>
+              </div>            
+            </section><br>
+          <div class="btns-group">
+            <button class="btn btn-prev" id="prev-2">
+                <a href="#part-2" >
+                Previous</a></button>
+
+            <button class="btn btn-next" id="submit-form">
+                <a href="#thanks" >
+                Submit</a></button>
+            </div>
+          </div>
+        </section>
+
+    </form>
+</section>
+
+<script src="buf.js"></script>
+      
+</body>
+</html>
+

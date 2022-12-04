@@ -1,0 +1,1658 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+
+        <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+body {
+    font-family: "Roboto", sans-serif;
+    line-height: 1.8;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 900 !important;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.4s ease;
+    font-weight: 800;
+    color: #20212c;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    z-index: 2;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgb(160, 3, 3), #f54444);
+    z-index: -1;
+}
+
+.bg-cover {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    padding: 14px 22px;
+    transition: all 0.3s ease;
+}
+
+.btn-main {
+    background: linear-gradient(to right,#f54444, rgb(160, 3, 3));
+    border-radius: 100px;
+    border: none;
+    font-weight: 600;
+    color: #fff;
+    width: 100px;
+}
+
+.btn:hover {
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.navbar {
+    box-shadow: 0 12px 20px rgba(0,0,0,0.1);
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    background: -webkit-linear-gradient(#f54444, rgb(160, 3, 3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section-intro {
+    margin-bottom: 40px;
+}
+
+.section-intro .divider {
+    height: 4px;
+    width: 70px;
+    background: linear-gradient(to right,#f54444, rgb(160, 3, 3));
+    margin: 16px auto;
+}
+
+
+
+
+/* .service{
+  width: 100vw;
+  text-align: center;
+}
+
+.service .row{
+  margin:2rem 0;
+  padding:0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service .row .image img{
+  width:50vw;
+  height:55vh;
+}
+
+.service .row .content{
+  text-align: left;
+  padding:0 3rem;
+}
+
+.service .row .content h3{
+  font-size: 3rem;
+  color:var(--color);
+}
+
+.service .row .content p{
+  font-size: 1.5rem;
+  color:#333;
+  padding:1rem 0;
+}
+
+@media (max-width:768px){
+    .service .row{
+    flex-flow: column-reverse;
+  }
+
+  .service .row:nth-child(even){
+    flex-flow: column;
+  }
+
+  .service .row .image img{
+    width: 100vw;
+  }
+
+  .service .row .content{
+    padding:0;
+  }
+} */
+
+.our-partner-slider {
+    background-color: var(--bg-color);
+    padding: 3.125rem 0;
+}
+
+#vanshaj{
+    transform: scale(.8);
+}
+
+
+
+
+
+
+
+
+/* .feature i {
+    background: -webkit-linear-gradient(#f54444, rgb(160, 3, 3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 54px;
+} */
+
+.chart{
+  background-color: white;
+  margin: 40px;
+  height: 400px;
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-around;
+  align-items: center;
+  /* background-color:#e78296; */
+
+}
+table{
+  border-collapse: collapse;
+  width: 750px;
+  height: 400px;
+}
+.table{
+  /* padding: 20px; */
+  /* border-collapse: collapse; */
+  color: white;
+  /* margin-top: 30px; */
+}
+th{
+  width: 180px;
+  font-size: larger;
+  height: 40px;
+  background-color: cornflowerblue
+}
+td{
+background-color: lightpink;
+color: black;
+text-align: center;
+font-weight: bold;
+height: 30px;
+border-color: white;
+}
+
+.fill-container{
+  position: absolute;
+  top: 0;
+  right: -68%;
+  bottom: -30%;
+  left: 0;
+  margin: auto;
+  height: 270px;
+  width: 270px;
+}
+.fill{
+  font-weight: bold;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 30px;
+  position: absolute;
+  background: red;
+  /* border-top:none; */
+  /* /* border-left: 3px solid black; */
+  /* border-right: 3px solid black; */
+  /* border: 1px  solid black; */
+  /* box-sizing: border-box; */
+  /* top: -25%; */
+  height: 100%;
+  width: 100%;
+  /* outline: 1; */
+  padding: 40px;
+  /* display: flex; */
+  align-items: center;
+  overflow: hidden;
+  border-radius: 100% 1% 100% 100%;
+  transform: rotate(-45deg);
+  margin-right: -50px;
+}
+
+.fill::before {
+  content: "";
+  height: 200px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* transform: translateX(-50%); */
+  border-radius: 40%;
+  /* animation: spin 3s linear infinite; */
+  /* overflow: hidden; */
+}
+
+ .fill::after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: -50%;
+  height: 200%;
+  width: 200%;
+  /* box-sizing: border-box;  */
+  background-color:white;
+  border-radius: 40%;
+  animation: spin 6s ease-in-out infinite; 
+   /* motion-rotation: reverse;  */
+ }
+
+
+@keyframes spin {
+0% {
+  transform: translatY(0) rotate(0deg);
+}
+100% {
+  transform: translateY(-100%) rotate(400deg);
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.review {
+    box-shadow: 0 12px 12px rgba(0,0,0,0.1);
+}
+.review .person {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    padding-bottom: 18px;
+}
+
+.review .person img {
+    width: 75px;
+    height: 75px;
+    border-radius: 100px;
+}
+
+.review .stars {
+    color: orange;
+}
+
+form .form-control {
+    border-radius: 0;
+    background: transparent;
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+form .form-control:focus {
+    color: #fff;
+    background: transparent;
+    border-color: #fff;
+}
+
+form input.form-control {
+    height: 54px;
+}
+
+form .form-control::placeholder {
+    color: #fff;
+}
+
+
+
+
+
+.social {
+  position: fixed;
+  top: 150px;
+  z-index: 10;
+  padding-left: 19px;
+}
+.social ul {
+  padding: 0px;
+  transform: translate(-270px, 0);
+}
+.social ul li {
+  display: block;
+  margin: 5px;
+  background: rgba(0, 0, 0, 0.36);
+  width: 300px;
+  text-align: right;
+  padding: 10px;
+  border-radius: 0 30px 30px 0;
+  transition: all 1s;
+}
+.social ul li:hover {
+  transform: translate(110px, 0);
+  background: rgba(255, 255, 255, 0.4);
+}
+.social ul li:hover a {
+  color: #000;
+}
+.social ul li:hover i {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.36);
+  transform: rotate(360deg);
+  transition: all 1s;
+}
+.social ul li i {
+  /* margin-left: 20px; */
+  color: #000;
+  background: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+  background: #ffffff;
+  transform: rotate(0deg);
+  padding: 20px;
+}
+
+
+
+
+
+
+
+/* GALLERY */
+.gallery1 {
+  --s: 150px;
+  --g: 10px; 
+  --f: 1.5;  
+  
+  display: grid;
+  gap: 10px;
+  margin-left: 30%;
+  /* gap: var(--g); */
+  width: calc(3*var(--s) + 2*var(--g));
+  aspect-ratio: 1;
+  grid-template-columns: repeat(3,auto);
+}
+
+.gallery1 > img {
+  width: 0;
+  height: 0;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  filter: grayscale(80%);
+  transition: .35s linear;
+}
+
+.gallery1 img:hover{
+  filter: grayscale(0);
+  width:  calc(var(--s)*var(--f));
+  height: calc(var(--s)*var(--f));
+}
+
+
+.gallery .gallery1{
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  justify-content: center;
+}
+
+
+
+
+/* TEAM */
+.team{
+  display: grid;
+  grid-template-columns: repeat(4,300px);
+  gap: 17px;
+  margin-left: 0%;
+  height: 50%;
+  place-items: center;
+  text-align: center;
+  /* background: #f2f2f2; */
+  padding-bottom: -30%;
+  margin-left: -50px;
+}
+.majdoor{
+  position: relative;
+  height: 400px;
+  width: 300px;
+  overflow: hidden;
+  /* background: #fff; */
+  box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.3);
+  transition: 0.3s ease-out;
+}
+.majdoor:hover{
+  box-shadow: 0px 1px 35px 0px rgba(0,0,0,0.3);
+}
+.majdoor .photo{
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  transition: transform 0.3s ease-out;
+}
+.majdoor:hover .photo{
+  transform: translateY(-100px);
+}
+.photo img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-out;
+}
+.majdoor:hover .photo img{
+  opacity: 0.7;
+}
+.majdoor:hover .photo{
+ transform: translateY(-100px);
+}
+.majdoor ul{
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  list-style: none;
+}
+.majdoor ul li{
+  margin: 0 5px;
+}
+.majdoor ul li a{
+  display: block;
+  height: 40px;
+  width: 40px;
+  color: #000;
+  line-height: 40px;
+  font-size: 20px;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translateY(200px);
+  background: #fff;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+.majdoor:hover > ul > li > a{
+  opacity: 1;
+  transform: translateY(0);
+}
+.majdoor:hover > ul > li:nth-child(2) a{
+  transition-delay: 0.1s;
+}
+.majdoor:hover > ul > li:nth-child(3) a{
+  transition-delay: 0.2s;
+}
+.majdoor:hover > ul > li:nth-child(4) a{
+  transition-delay: 0.3s;
+}
+.majdoor:hover > ul > li:nth-child(5) a{
+  transition-delay: 0.4s;
+}
+.majdoor .content{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+.info{
+  position: absolute;
+  bottom: 15px;
+  text-align: center;
+  width: 100%;
+  color: #000;
+  line-height: 26px;
+}
+.info h2{
+  font-size: 27px;
+  margin: 3px 0;
+}
+.info span{
+  color: #1a1a1a;
+}
+
+#part-1{
+  grid-column-start: 1;
+}
+
+#part-2{
+  grid-column-start: 2;
+}
+
+#part-3{
+  grid-column-start: 3;
+}
+
+#part-4{
+  grid-column-start: 4;
+}
+
+
+
+
+
+
+.contact .row{
+  margin:2rem 0;
+  padding:0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact .row .join-img img{
+  width:50vw;
+  height:55vh;
+}
+
+.contact .row .col-12 section-intro{
+  text-align: left;
+  padding:0 3rem;
+}
+
+/* .contact .row .content h3{
+  font-size: 3rem;
+  color:var(--color);
+} */
+
+.contact .row .col-12 section-intro p{
+  font-size: 1.5rem;
+  color:#333;
+  padding:1rem 0;
+}
+.flex1{
+    height: 400px;
+    display: flex;
+    margin-top: 60px;
+    padding: 40px;
+    justify-content: space-between;
+    width:100%;
+}
+.s1{
+    margin-top: -95px;
+    width:30vw;
+  height:30vh;
+}
+.s2{
+    border-radius: 20%;
+    border-color: #1a1a1a;
+    /* width:100px; */
+    /* background-color: red; */
+    margin-right:-80px;
+}
+.s3{
+    border-radius: 20%;
+    border-color: #1a1a1a;
+    margin-right: 80px;
+    /* background-color: red;  */
+}
+
+
+
+
+
+/* FAQ section */
+#FAQ{
+  font-size: 12px;
+}
+
+#FAQ{
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: #efefef;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.accordion {
+  position: relative;
+  width: 350px;
+  margin-left: 40px;
+}
+
+.title {
+  margin-top: 20px;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.content-accordion {
+  margin-top: 35px;
+  margin-right: 50px;
+}
+
+.question-answer {
+  width: 100%;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-img {
+  position: relative;
+  width: 320px;
+}
+
+.title-question {
+  margin: 1.4rem 0rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #000;
+}
+
+.question-btn {
+  font-size: 1.5rem;
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.up-icon {
+  display: none;
+}
+
+.answer {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  display: none;
+}
+
+.show-text .answer {
+  display: block;
+}
+
+.show-text .up-icon {
+  display: inline;
+}
+
+.show-text .down-icon {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .accordion {
+    width: 920px;
+    height: 0;
+    display: flex;
+  }
+
+  .accordion-img {
+    position: relative;
+    width: 420px;
+    top: 88px;
+  }
+
+  .question-answer {
+    width: 380px;
+  }
+
+  .content-accordion {
+    margin-top: 85px;
+  }
+
+  .title {
+    margin-top: 50px;
+    font-size: 3rem;
+  }
+}
+
+
+
+
+
+
+
+
+/* FOOTER */
+.footer_wrapper {
+    background-color: black;
+    color: white;
+}
+
+.footer_wrapper h5 {
+    color: var(--text-white);
+    margin-bottom: 1.25rem;
+}
+
+.footer_wrapper ul li {
+    margin-bottom: .5rem;
+    list-style: none;
+}
+
+.footer_wrapper .contact-info li a{
+    color: #caa169
+}
+
+.footer_wrapper .link-widget li a,
+.footer_wrapper p {
+    color: var(--text-gray);
+    font-size: .875rem;
+    padding-left:1.5rem;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+.footer_wrapper .link-widget li a::before {
+    content: '\f105';
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0.3rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.footer_wrapper .link-widget li a:hover {
+    margin-left: .625rem;
+    color: var(--secondary-text);
+}
+
+.footer_wrapper .social-network a {
+    width: 2.1875rem;
+    height: 2.1875rem;
+    margin: .5rem;
+    line-height:2rem;
+    font-size: .875rem;
+    display: inline-block;
+    border: .125rem solid var(--text-gray);
+    color: var(--text-gray);
+    text-align: center;
+    border-radius: 100%;
+    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.footer_wrapper .social-network a:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--text-white);
+    box-shadow: 0 .625rem .9375rem 0 rgb(0 0 0 / 10%);
+    transform: translateY(-0.1875rem);
+}
+
+.footer_wrapper .form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--secondary-color);
+}
+
+.footer_wrapper .copyright-section {
+    background-color: var(--primary-color);
+    padding: 1.25rem 0 .3125rem;
+    text-align: center;
+}
+
+
+.footer_wrapper .copyright-section a {
+    color: var(--secondary-text);
+}
+
+
+:root #home {    
+    --secondary-color: #caa169;
+    --bg-color: #f4f4f4;
+    --bg-white: #fff;
+    --primary-font: 'Poppins', sans-serif;
+    --secondary-font: 'Oswald', sans-serif;   
+    --text-white: #fff;
+}
+
+section #home {
+    padding: 3.125rem 0;
+}
+
+
+/* h1 #home {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    font-family: var(--secondary-font);
+} */
+
+
+
+p #home {
+    font-size: 1rem;
+    color: var(--text-black);
+    line-height: 1.625rem;
+}
+
+.banner_wrapper {
+    height: 40.625rem;
+}
+
+.banner_wrapper .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.banner_wrapper .swiper-slide {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.banner_wrapper .swiper-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.banner_wrapper .swiper-pagination-bullets .swiper-pagination-bullet {
+    width: .9375rem;
+    height: .9375rem;
+    background-color: var(--secondary-color);
+    border: .0625rem solid var(--bg-white);
+}
+
+.banner_wrapper .swiper .slide-caption {
+    height: 100%;
+    position: relative;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner_wrapper .swiper .slide-caption p {
+    max-width: 37.5rem;
+    margin: 0 auto;
+    color: var(--text-white);
+}
+
+
+    </style>
+
+    <title>Home Page</title>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar">
+
+    <!--navbar-->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white" data-aos="fade-down">
+        <div class="container">
+            <a class="navbar-brand" href="#">BLOOD.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reviews">Idea</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#blog">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Join with us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#FAQ">FAQ</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <nav class="social"> 
+        <ul>
+          <li><a href="">Facebook <i class="fa fa-facebook"></i></a></li>
+          <li><a href="">Google <i class="fa fa-google-plus"></i></a></li>
+          <li><a href="">Twitter <i class="fa fa-twitter"></i></a></li>
+          <li><a href="">Github <i class="fa fa-github"></i></a></li>
+          <li><a href="">Linkedin <i class="fa fa-linkedin"></i></a></li>
+          <li><a href="">Mailu <i class="fa fa-envelope"></i></a></li>
+        </ul>
+    </nav>
+
+   
+    <!-- HOME -->
+    <section id="home" class="banner_wrapper p-0">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background-image: url(blood14.jpg);">
+                    <div class="slide-caption text-center">
+                        <div>
+                            <h1>WELCOME TO OUR WEBSITE</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" style="background-image: url(blood5.jpg);">
+                    <div class="slide-caption text-center">
+                        <div>
+                            <h1>WELCOME TO OUR WEBSITE</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua. Ut enim </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    
+
+    <!--services-->
+    <section id="service" class="service">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 section-intro text-center" data-aos="fade-up">
+                    <h1>Our Services</h1>
+                    <div class="divider"></div>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                        suffered<br>
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    </p>
+                </div>
+            </div>
+
+            
+
+      
+
+
+            <div class="col-12 section-intro text-center" data-aos="fade-up">
+            <div class="our-partner-slider mt-5">
+                <div class="container swiper our-partner">
+                    <div class=" swiper-wrapper">
+                        <div class="swiper-slide"><img src="A+.jpg"></div>
+                        <div class="swiper-slide"><img src="A-.jpg"></div>
+                        <div class="swiper-slide"><img src="B-.jpg"></div>
+                        <div class="swiper-slide"><img src="B+.jpg"></div>
+                        <div class="swiper-slide"><img src="AB+.jpg"></div>
+                        <div class="swiper-slide"><img src="AB-.jpg"></div>
+                        <div class="swiper-slide"><img src="O+.jpg"></div>
+                        <div class="swiper-slide"><img src="O-.jpg"></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!--about-->
+    <section id="about" class="bg-cover" style="background-image: url(mr1.JPG);">
+        <div class="overlay"></div>
+        <div class="container text-white text-center">
+            <div class="row">
+                <div class="col-12 section-intro text-center" data-aos="fade-up">
+                    <h1>Watch our video</h1>
+                    <div class="divider"></div>
+                    <div class="vanshaj">
+                    <video class="video-slide active" src="blood donation.mp4" autoplay muted loop width="100%"></video>
+                    </div>            
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--features-->
+    <section id="features" class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 section-intro text-center" data-aos="fade-up">
+                    <h1>Our Features</h1>
+                    <div class="divider"></div>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                        suffered<br>
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    </p>
+                </div>
+            </div>
+            <!-- <div class="row gx-4 gy-5">
+                <div class="col-md-4 feature" data-aos="fade-up">
+                    <div class="boom"><img src="A-.jpg"></div>
+                    <h5 class="mt-4 mb-3">Feature Title</h5>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form</p>
+                </div>
+                <div class="col-md-4 feature" data-aos="fade-up">
+                    <div class="icon"><i class="icon-browser"></i></div>
+                    <h5 class="mt-4 mb-3">Feature Title</h5>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form</p>
+                </div>
+                <div class="col-md-4 feature" data-aos="fade-up">
+                    <div class="icon"><i class="icon-calendar"></i></div>
+                    <h5 class="mt-4 mb-3">Feature Title</h5>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form</p>
+                </div>
+                <div class="col-md-4 feature" data-aos="fade-up">
+                    <div class="icon"><i class="icon-camera"></i></div>
+                    <h5 class="mt-4 mb-3">Feature Title</h5>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form</p>
+                </div>
+                <div class="col-md-4 feature" data-aos="fade-up">
+                    <div class="icon"><i class="icon-scissors"></i></div>
+                    <h5 class="mt-4 mb-3">Feature Title</h5>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form</p>
+                </div>
+                <div class="col-md-4 feature" data-aos="fade-up">
+                    <div class="icon"><i class="icon-strategy"></i></div>
+                    <h5 class="mt-4 mb-3">Feature Title</h5>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                        alteration in some form</p>
+                </div>
+            </div> -->
+
+            <div class="chart">
+                <div class="table">
+                    <table><tr>
+                        <th>Blood Type</th>
+                        <th>Donate Blood To</th>
+                        <th>Receive Blood From</th></tr>
+
+                        <tr><td>A+</td>
+                            <td>A+,AB+</td>
+                            <td>A+,A-,O+</td></tr>
+                            <tr>
+                            <td>O+</td>
+                            <td>O+,A+,B+,AB+</td>
+                            <td>O+,O-</td></tr>
+                            <tr>
+                            <td>B+</td>
+                            <td>B+,AB+</td>
+                            <td>B+,B-,O+O-</td></tr>
+                            <tr>
+                            <td>AB+</td>
+                            <td>AB+</td>
+                            <td>Everyone</td></tr>
+                            <tr>
+                            <td>A-</td>
+                            <td>A+,A-,AB+,AB-</td>
+                            <td>A-,O-,</td></tr>
+                            <tr>
+                            <td>O-</td>
+                            <td>Everyone</td>
+                            <td>O-</td></tr>
+                            <tr>
+                            <td>B-</td>
+                            <td>B+,B-,AB+,AB-</td>
+                            <td>B-,O-</td></tr>
+                            <tr>
+                            <td>AB-</td>
+                            <td>AB+,AB-</td>
+                            <td>AB-,A-,B-,O-,</td></tr>
+                    </table>    
+                </div>
+                <div class="fill-container">
+                  <div class="fill">
+                    COMPATIBLE BLOOD DONARS
+                  </div>
+                </div>    
+                </div>
+                
+
+
+        </div>
+    </section>
+
+    <!--gallery-->
+    <section id="gallery" class="bg-cover text-white" style="background-image: url(img/cover_2.jpg);">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 section-intro text-center" data-aos="fade-up">
+                    <h1>Our Gallery</h1>
+                    <div class="divider"></div>
+                        <div class="gallery1">
+                            <img src="blood1.jpg" alt="">
+                            <img src="blood2.jpg" alt="">
+                            <img src="blood6.jpg" alt="">
+                            <img src="blood10.jpg" alt="">
+                            <img src="blood9.jpg" alt="">
+                            <img src="blood11.jpg" alt="">
+                            <img src="blood14.jpg" alt="">
+                            <img src="blood15.jpg" alt="">
+                            <img src="blood5.jpg" alt="">
+                        </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--reviews-->
+    <section id="reviews" class="text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 section-intro text-center" data-aos="fade-up">
+                    <h1>Our Idea</h1>
+                    <div class="divider"></div>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                        suffered<br>
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    </p>
+                </div>
+            </div>
+            <div class="row g-4 text-start">
+                
+            </div>
+        </div>
+    </section>
+
+    <!--OUR TEAM-->
+    <section id="blog" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 section-intro text-center" data-aos="fade-up">
+                    <h1>Our Team</h1>
+                    <div class="divider"></div>
+                    <main class="team">
+                        <section id="part-1">
+                          <div class="majdoor">
+                            <div class="photo">
+                              <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+                            </div>
+                            <div class="content">
+                              <div class="info">
+                                  <h2>
+                                    Andrew Neil
+                                  </h2>
+                                  <span>Web Developer</span>
+                              </div>
+                            </div>
+                            <ul>
+                              <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                              <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                              <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                              <li><a href="#"><span class="fab fa-github"></span></a></li>
+                              <li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                            </ul>
+                          </div>
+                        </section>
+                    
+                       <section id="part-2">
+                        <div class="majdoor">
+                          <div class="photo">
+                            <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+                          </div>
+                          <div class="content">
+                            <div class="info">
+                                <h2>
+                                  Andrew Neil
+                                </h2>
+                                <span>Web Developer</span>
+                            </div>
+                          </div>
+                          <ul>
+                            <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                            <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                            <li><a href="#"><span class="fab fa-github"></span></a></li>
+                            <li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                          </ul>
+                      </div>
+                     </section>
+                    
+                     <section id="part-3">
+                      <div class="majdoor">
+                        <div class="photo">
+                          <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+                        </div>
+                        <div class="content">
+                          <div class="info">
+                              <h2>
+                                Andrew Neil
+                              </h2>
+                              <span>Web Developer</span>
+                          </div>
+                        </div>
+                        <ul>
+                          <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                          <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                          <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                          <li><a href="#"><span class="fab fa-github"></span></a></li>
+                          <li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                        </ul>
+                    </div>
+                    </section>
+                    
+                    <section id="part-4">
+                      <div class="majdoor">
+                        <div class="photo">
+                          <img src="https://images.unsplash.com/photo-1492288991661-058aa541ff43?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80">
+                        </div>
+                        <div class="content">
+                          <div class="info">
+                              <h2>
+                                Andrew Neil
+                              </h2>
+                              <span>Web Developer</span>
+                          </div>
+                        </div>
+                        <ul>
+                          <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                          <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                          <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                          <li><a href="#"><span class="fab fa-github"></span></a></li>
+                          <li><a href="#"><span class="fab fa-linkedin"></span></a></li>
+                        </ul>
+                    </div>
+                    </section>
+                    </main>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- JOIN WITH US -->
+    <section id="contact" class="bg-cover text-white">
+        <div class="overlay"></div>
+        <div class="container">
+            
+            <div class="col-12 section-intro text-center" data-aos="fade-up">
+                    <h1>Join with us</h1>
+                    <div class="divider"></div>
+            </div>
+            <!-- <div class="row"> -->
+                <!-- <div class="col-12 section-intro text-center" data-aos="fade-up"></div>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have
+                        suffered<br>
+                        alteration in some form, by injected humour, or randomised words which don't look even slightly
+                    </p>
+                    <div class="text-center">
+                        <button class="btn btn-main" type="submit">Send Message</button>
+                    </div>
+                    <div class="join-img" id="img1">
+                        <img src="Add friends-amico.svg" alt="" class="accordion-img">
+                    </div>
+                </div> -->
+                <div class="flex1">
+                    <div class="s1">
+                        <img src="Add friends-amico.svg" >
+                </div>    
+                <div class="s2">
+                    <button class="btn btn-main" type="submit">Login</button>
+                    </div>
+                <div>
+                    <div class="s3">
+                        <button class="btn btn-main" type="submit">Sign Up</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FAQ SECTION -->
+    <section id="FAQ" class="faq">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 section-intro text-center" data-aos="fade-up">
+                    <h1>Frequently Asked Questions</h1>
+                    <div class="divider"></div>
+                    <main class="accordion">
+                        <div class="faq-img">
+                            <img src="Questions-cuate.svg" alt="" class="accordion-img">
+                        </div>
+                        <div class="content-accordion">
+                            <div class="question-answer">
+                                <div class="question">
+                                    <h3 class="title-question">
+                                        Do you do a Front-end developer?
+                                    </h3>
+                                    <button class="question-btn">
+                                        <span class="up-icon">
+                                            <i class="fas fa-chevron-up"></i>
+                                        </span>
+                                        <span class="down-icon">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="answer">
+                                    <p>Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. 
+                                        Quisquam assumenda sapiente 
+                                        mollitia excepturi quos id 
+                                        magnam obcaecati non est? 
+                                        Maiores?</p>
+                                </div>
+                            </div>
+                            <div class="question-answer">
+                                <div class="question">
+                                    <h3 class="title-question">
+                                        What is the differrence between 
+                                        Front-end and Back-end?
+                                    </h3>
+                                    <button class="question-btn">
+                                        <span class="up-icon">
+                                            <i class="fas fa-chevron-up"></i>
+                                        </span>
+                                        <span class="down-icon">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="answer">
+                                    <p>Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. 
+                                        Quisquam assumenda sapiente 
+                                        mollitia excepturi quos id 
+                                        magnam obcaecati non est? 
+                                        Maiores?</p>
+                                </div>
+                            </div>
+                            <div class="question-answer">
+                                <div class="question">
+                                    <h3 class="title-question">
+                                        Which is better Front-end or Back-end?
+                                    </h3>
+                                    <button class="question-btn">
+                                        <span class="up-icon">
+                                            <i class="fas fa-chevron-up"></i>
+                                        </span>
+                                        <span class="down-icon">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="answer">
+                                    <p>Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. 
+                                        Quisquam assumenda sapiente 
+                                        mollitia excepturi quos id 
+                                        magnam obcaecati non est? 
+                                        Maiores?</p>
+                                </div>
+                            </div>
+                            <div class="question-answer">
+                                <div class="question">
+                                    <h3 class="title-question">
+                                        What is Front-end?
+                                    </h3>
+                                    <button class="question-btn">
+                                        <span class="up-icon">
+                                            <i class="fas fa-chevron-up"></i>
+                                        </span>
+                                        <span class="down-icon">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="answer">
+                                    <p>Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. 
+                                        Quisquam assumenda sapiente 
+                                        mollitia excepturi quos id 
+                                        magnam obcaecati non est? 
+                                        Maiores?</p>
+                                </div>
+                            </div>
+                            <div class="question-answer">
+                                <div class="question">
+                                    <h3 class="title-question">
+                                        What is Back-end?
+                                    </h3>
+                                    <button class="question-btn">
+                                        <span class="up-icon">
+                                            <i class="fas fa-chevron-up"></i>
+                                        </span>
+                                        <span class="down-icon">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </button>
+                                </div>
+                                <div class="answer">
+                                    <p>Lorem ipsum dolor sit amet
+                                        consectetur adipisicing elit. 
+                                        Quisquam assumenda sapiente 
+                                        mollitia excepturi quos id 
+                                        magnam obcaecati non est? 
+                                        Maiores?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+
+   
+<!-- FOOTER -->
+    <section id="contact" class="footer_wrapper mt-3 mt-md-0 pb-0">
+        <div class="container pb-3">
+            <div class="row">
+                <div class="col-lg-3 col-md-6" data-aos="fade-right">
+                    <h5>Our Location</h5>
+                    <p class="ps-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dignissim erat ut laoreet
+                        pharetra....</p>
+                    <div class="contact-info">
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="fa fa-home me-3"></i> No. 96, South City, India</a></li>
+                            <li><a href="#"><i class="fa fa-phone me-3"></i>+91 7999806065</a></li>
+                            <li><a href="#"><i class="fa fa-envelope me-3"></i>info@example.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                    <h5>Quick Links</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#service">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#reviews">Idea</a></li>
+                        <li><a href="#blog">Team</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                    <h5>Demo Links</h5>
+                    <ul class="link-widget p-0">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Office</a></li>
+                        <li><a href="#">Delivery</a></li>
+                        <li><a href="#">Our Store</a></li>
+                        <li><a href="#">Guarantee</a></li>
+                        <li><a href="#">Buy Gift Card</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-left">
+                    <h5>Newsletter</h5>
+                    <p class="ps-0">Subscribe for latest updates</p>
+                    <div class="form-group mb-4">
+                        <input type="email" class="form-control bg-transparent" placeholder="enter your email here">
+                        <button type="submit" class="main-btn rounded-2 mt-3 border-white text-white">Subscribe</button>
+                    </div>
+                    <h5>Stay Connected</h5>
+                  <div class="social">
+                    <ul class="social-network d-flex align-items-center p-0">
+                        <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                        <li><a href="#"><i class="fab fa-github"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();     
+    </script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+    direction: "vertical",
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    autoplay: {
+        delay: 3500,
+    },
+});
+
+var swiper = new Swiper(".our-partner", {
+    slidesPerView: 5,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+        delay: 2000,
+    },
+    breakpoints: {
+        '991': {
+            slidesPerView: 5,
+            spaceBetween: 10,
+        },
+        '767': {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+        '320': {
+            slidesPerView: 2,
+            spaceBetween: 8,
+        },
+
+
+    },
+});
+
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LLWL5N9CSM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LLWL5N9CSM');
+</script>
+
+<script>
+    const questions = document.querySelectorAll('.question-answer');
+
+questions.forEach(function(question) {
+const btn = question.querySelector('.question-btn');
+btn.addEventListener("click", function() {
+    questions.forEach(function(item) {
+        if (item !== question) {
+            item.classList.remove("show-text");
+        }
+    })
+    question.classList.toggle("show-text");
+})
+})
+</script>
+</body>
+
+</html>

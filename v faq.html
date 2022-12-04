@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+
+    <style>
+   
+
+:root{
+  --color:#810202;
+}
+
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; padding:0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+  transition: all .2s linear;
+  text-decoration: none;
+}
+
+html{
+  font-size: 80%;
+}
+
+.faq{
+  min-height: 100vh;
+  width: 100vw;
+  text-align: center;
+  padding:0 2rem;
+}
+
+.faq .row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:0 2rem;
+}
+
+.faq .row .image img{
+  height:70vh;
+  width:50vw;
+}
+
+.faq .row .accordion-container{
+  width: 50%;
+  text-align: left;
+}
+
+.faq .row .accordion-container .accordion .accordion-header{
+  background-color: var(--color);
+  margin:1rem 0;
+  box-shadow: .1rem .1rem .3rem rgba(0,0,0,.3);
+  cursor: pointer;
+}
+
+.faq .row .accordion-container .accordion .accordion-header span{
+  display: inline-block;
+  text-align: center;
+  height:4rem;
+  width:5rem;
+  line-height: 4rem;
+  font-size: 2rem;
+  background:#fff;
+  color:#333;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}
+
+.faq .row .accordion-container .accordion .accordion-header h3{
+  display: inline;
+  color: #fff;
+  font-weight: 400;
+  padding-left: .5rem;
+  font-size: 1.5rem;
+}
+
+.faq .row .accordion-container .accordion .accordion-body{
+  padding:1rem;
+  color:#444;
+  box-shadow: .1rem .1rem .3rem rgba(0,0,0,.3);
+  font-size: 1.3rem;
+  display: none;
+}
+
+.faq .row .accordion-container .accordion:nth-child(1) .accordion-body{
+  display: block;
+}
+    </style>
+</head>
+<body>
+    <section id="faq" class="faq">
+
+<h1 class="heading">FAQ</h1>
+
+<div class="row">
+
+<div class="image">
+  <img src="Questions-cuate.svg" alt="">
+</div>
+
+<div class="accordion-container">
+
+  <div class="accordion">
+    <div class="accordion-header">
+      <span>+</span>
+      <h3>How much will it cost?</h3>
+    </div>
+    <div class="accordion-body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header">
+      <span>+</span>
+      <h3>How To update website?</h3>
+    </div>
+    <div class="accordion-body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header">
+      <span>+</span>
+      <h3>is domain provided free?</h3>
+    </div>
+    <div class="accordion-body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header">
+      <span>+</span>
+      <h3>how long it takes to design?</h3>
+    </div>
+    <div class="accordion-body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
+    </div>
+  </div>
+
+  <div class="accordion">
+    <div class="accordion-header">
+      <span>+</span>
+      <h3>is it seo freindly?</h3>
+    </div>
+    <div class="accordion-body">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi atque possimus ipsum quae error ullam reiciendis in iste maiores nulla. Impedit nam praesentium omnis cupiditate excepturi natus magnam sunt deleniti!</p>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+    $('.accordion-header').click(function(){
+  $('.accordion .accordion-body').slideUp();
+  $(this).next('.accordion-body').slideDown();
+  $('.accordion .accordion-header span').text('+');
+  $(this).children('span').text('-');
+});
+</script>
+</body>
+</html>
